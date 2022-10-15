@@ -90,3 +90,34 @@ console.log(randomValue);
  * You can’t even call Object’s own methods:
  * The solution is the any type, which is the type of variables that don’t have a type annotation:
  */
+
+export {};
+// Unknown Type - The unknown type is the type-safe counterpart of any. We can assign any value to a variable of type unknown, but we can’t access any properties of a value of type unknown without first checking whether the value is of a specific type.
+
+let myVariable: unknown = 10;
+
+myVariable = true;
+myVariable = "Samin Israr Ravi"; // No Error just like any type
+
+//But
+// console.log(myVariable.name);  // Error
+// console.log(myVariable.toUpperCase()); // Error
+// console.log(myVariable.length); // Error
+// console.log(myVariable.toFixed(2)); // Error
+// console.log(myVariable.valueOf()); // Error
+// console.log(myVariable.toString()); // Error
+// So we see that we can assign any value to unknown type but we can't access any properties of a value of type unknown without first checking whether the value is of a specific type.
+
+//We can use type assertion to access the properties of unknown type
+
+(myVariable as string).toUpperCase(); // Type Assertion / Type Casting
+(<string>myVariable).toUpperCase(); // Type Assertion / Type Casting
+(myVariable as number).toFixed(2); // Type Assertion / Type Casting
+(<number>myVariable).toFixed(2); // Type Assertion / Type Casting
+(myVariable as boolean).valueOf(); // Type Assertion / Type Casting
+(<boolean>myVariable).valueOf(); // Type Assertion / Type Casting
+
+//We can also use typeof to check the type of unknown type
+if (typeof myVariable === "string") {
+  console.log(myVariable.toUpperCase());
+}

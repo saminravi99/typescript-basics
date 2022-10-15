@@ -14,6 +14,7 @@ export{}
  * 10. Void
  * 11. Never
  * 12. Object
+ * 13. Unknown
  */
 
 let age: number = 20;

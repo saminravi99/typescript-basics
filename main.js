@@ -26,6 +26,7 @@ console.log(isMale.valueOf());
  * 10. Void
  * 11. Never
  * 12. Object
+ * 13. Unknown
  */
 var n = null;
 var u = undefined; // not much use so they are subtypes of all other types
@@ -77,3 +78,6 @@ console.log(randomValue);
  * You can’t even call Object’s own methods:
  * The solution is the any type, which is the type of variables that don’t have a type annotation:
  */ 
+
+
+
